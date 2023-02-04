@@ -22,8 +22,8 @@ FactionTiers
 	[
 		{
 			FactionID = stafa.federation
-			TierRangeLow = [1, (&~/MaxTier) - (&~/TierSpread)]
-			TierRangeHigh = [1 + (&~/TierSpread), (&~/MaxTier)]
+			TierRangeLow = [4, (&~/MaxTier) - (&~/TierSpread)]
+			TierRangeHigh = [4 + (&~/TierSpread), (&~/MaxTier)]
 		}
 	]
 }
