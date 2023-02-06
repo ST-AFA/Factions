@@ -1,6 +1,6 @@
 SubSpawners
 [
-	// Faction Senfdeckels.Galacitc_Empire missions.
+	// Faction Federation
 	{
 		Type = Mission
 		Metatype = FactionHunt
