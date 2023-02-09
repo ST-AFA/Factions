@@ -18,7 +18,7 @@ SubSpawners
 				[
 					{
 						Type = DestroyShips
-						TargetsTag = { Tag=faction_wanderer; OnlyFactions=[Senfdeckels.Galacitc_Empire]; }
+						TargetsTag = { Tag=faction_wanderer; OnlyFactions=[imperium, monolith, cabal]; }
 						TargetCountFraction = 50%
 						MissionInvalidIfZeroTargets = true
 						AllowNpcKills = false
@@ -34,71 +34,19 @@ SubSpawners
 		[
 			{
 				Type = Money
-				MoneyPerHighTier = &<tier_tables.rules>/StandardMoneyPerTier
+				MoneyPerHighTier = &<./Data/modes/career/tier_tables.rules>/StandardMoneyPerTier
 				MoneyPerTierMultiplier = 2
 				RoundToMultiple = 500
 			}
 			{
 				Type = Fame
-				FamePerHighTier = &<tier_tables.rules>/StandardFamePerTier
+				FamePerHighTier = &<./Data/modes/career/tier_tables.rules>/StandardFamePerTier
 				FamePerTierMultiplier = 2
-				MaxFamePerHighTier = &<tier_tables.rules>/StandardMaxFamePerTier
+				MaxFamePerHighTier = &<./Data/modes/career/tier_tables.rules>/StandardMaxFamePerTier
 			}
             {
                 Type = Reputation
-                ReputationPerHighTier = &<tier_tables.rules>/StandardReputationPerTier
-                ReputationPerTierMultiplier = 2
-            }
-		]
-	}
-
-	// Faction Senfdeckels.Republic missions.
-	{
-		Type = Mission
-		Metatype = FactionHunt
-		SpawnAt = Tag
-		SpawnAtTag = { Mode=Random; Tag=trade_station; OnlyOpposingFactions=true; }
-		OkayIfSpawnAtTagNotFound = true
-		Faction = OwnerOfTag
-		FactionTag = &SpawnAtTag
-		OkayIfFactionTagNotFound = true
-		Objectives
-		[
-			{
-				Type = Sequential
-				SubObjectives
-				[
-					{
-						Type = DestroyShips
-						TargetsTag = { Tag=faction_wanderer; OnlyFactions=[Senfdeckels.Republic]; }
-						TargetCountFraction = 50%
-						MissionInvalidIfZeroTargets = true
-						AllowNpcKills = false
-						OverrideDisplayFormatKey = "Objectives/DestroyFactionShips"
-					}
-					{
-						Type = ReceiveRewards
-					}
-				]
-			}
-		]
-		Rewards
-		[
-			{
-				Type = Money
-				MoneyPerHighTier = &<tier_tables.rules>/StandardMoneyPerTier
-				MoneyPerTierMultiplier = 2
-				RoundToMultiple = 500
-			}
-			{
-				Type = Fame
-				FamePerHighTier = &<tier_tables.rules>/StandardFamePerTier
-				FamePerTierMultiplier = 2
-				MaxFamePerHighTier = &<tier_tables.rules>/StandardMaxFamePerTier
-			}
-            {
-                Type = Reputation
-                ReputationPerHighTier = &<tier_tables.rules>/StandardReputationPerTier
+                ReputationPerHighTier = &<./Data/modes/career/tier_tables.rules>/StandardReputationPerTier
                 ReputationPerTierMultiplier = 2
             }
 		]

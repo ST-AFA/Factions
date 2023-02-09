@@ -37,12 +37,12 @@ Actions
 	}
 	
 	// Add faction to StartingNodePicker
-	{
-		Action = Replace
-		Replace = "<galaxy_map/map_generators/base_galaxy.rules>/StartingNodePicker/CandidatesClosestToFactions"
-		With = [1, [stafa.federation, monolith, cabal]]
-	}
-	// Allow spawn in federation space
+	// {
+		// Action = Replace
+		// Replace = "<galaxy_map/map_generators/base_galaxy.rules>/StartingNodePicker/CandidatesClosestToFactions"
+		// With = [1, [stafa.federation, monolith, cabal]]
+	// }
+	// Allow start in federation space >> federation ship too strong to allow this for starter ships
 	// {
 		// Action = Replace
 		// Replace = "<galaxy_map/map_generators/base_galaxy.rules>/StartingNodePicker/AllowedFactions"
@@ -56,11 +56,11 @@ Actions
         ManyToAdd = &<codex/lore.rules>/CodexPages
 	}
 	//Generate Mission related to Starfleet
-	// {
-		// Action = AddMany
-		// AddTo = "<modes/career/sysgen_sim_global_missions.rules>/SubSpawners"
-        // ManyToAdd = &<career/sysgen_sim_global_missions.rules>/SubSpawners
-	// }
+	{
+		Action = AddMany
+		AddTo = "<modes/career/sysgen_sim_global_missions.rules>/SubSpawners"
+        ManyToAdd = &<career/sysgen_sim_global_missions.rules>/SubSpawners
+	}
 	
 	//Starfleet Faction Ship
 	{
@@ -97,133 +97,48 @@ Actions
 		With = "logo.ship.png"
 	}
 	
+	//Remap ships for having fleet battles, especially in later stages of the game
+	{
+		Action = Replace
+		Replace = "<modes/career/fleet_tier_remap_table.rules>/FleetTierRemapTable"
+		With = &<career/fleet_tier_remap_table.rules>/FleetTierRemapTable
+	}
+	
+	//Set the doubled amount of defense stations in career mode
+	{
+		Action = Replace
+		Replace = "<modes/career/sysgen_trade_stations.rules>/SubSpawners/7/SubSpawners/0/Count"
+		With = 2
+    }
+    {
+		Action = Replace
+		Replace = "<modes/career/sysgen_trade_stations.rules>/SubSpawners/7/SubSpawners/1/Count"
+		With = [0, 2]
+    }
+    {
+		Action = Replace
+		Replace = "<modes/career/sysgen_trade_stations.rules>/StationDefenses/Count"
+		With = [5, 8]
+    }
+    {
+		Action = Replace
+		Replace = "<modes/career/sysgen_trade_stations.rules>/StationDefenses/Distance"
+		With = 200
+    }
+	
 	//Add Starter Ships
 	// {
 		
 		// Action = AddMany
 		// AddTo = "<builtin_ships/Starter/builtins_starter.rules>/Ships"
-        // ManyToAdd = &<builtin_ships/Senfdeckels.Starter/builtins_Senfdeckels.Starter.rules>/Ships
+        // ManyToAdd = &<buildin_ships/fed/Starter/Starter.rules>/Ships
 		
 	// }
 	
 	//Modify world generation
-	
-	// {
-		// Action = Replace
-		// Replace = "<galaxy_map/map_generators/base_galaxy.rules>/StartingNodePicker/CandidatesClosestToFactions"
-        // With = [1, [monolith, cabal, Senfdeckels.Galactic_Empire]]
-	// }
-
-	
-	// {
-		// Action = Replace
-		// Replace = "<./Data/factions/factions.rules>/Factions"
-		// With =
-		// [
-			// // Galactic_Empire
-			// {
-				// ID = Senfdeckels.Galactic_Empire
-				// NameKey = "Factions/Galactic_Empire"
-				// Icon
-				// {
-					// Texture
-					// {
-						// File = "Galactic_Empire.png"
-						// SampleMode = Linear
-						// MipLevels = max
-					// }
-				// }
-				// BorderColor = [255, 255, 255]
-				// MilitaryPlayerIndex = 500
-				// CivilianPlayerIndex = 501
-			// }
-			// // Republic
-			// {
-				// ID = Senfdeckels.Republic
-				// NameKey = "Factions/Republic"
-				// Icon
-				// {
-					// Texture
-					// {
-						// File = "Republic.png"
-						// SampleMode = Linear
-						// MipLevels = max
-					// }
-				// }
-				// BorderColor = [0, 31, 255]
-				// MilitaryPlayerIndex = 600
-				// CivilianPlayerIndex = 601
-			// }
-			// // Monolith Cooperative
-			// {
-				// ID = monolith
-				// NameKey = "Factions/Monolith"
-				// Icon
-				// {
-					// Texture
-					// {
-						// File = "monolith.png"
-						// SampleMode = Linear
-						// MipLevels = max
-					// }
-				// }
-				// BorderColor = [0, 196, 255]
-				// MilitaryPlayerIndex = 100
-				// CivilianPlayerIndex = 101
-			// }
-
-			// // Cabal of Sol
-			// {
-				// ID = cabal
-				// NameKey = "Factions/Cabal"
-				// Icon
-				// {
-					// Texture
-					// {
-						// File = "cabal.png"
-						// SampleMode = Linear
-						// MipLevels = max
-					// }
-				// }
-				// BorderColor = [255, 237, 102]
-				// MilitaryPlayerIndex = 200
-				// CivilianPlayerIndex = 201
-			// }
-
-			// // Centauri Imperium
-			// {
-				// ID = imperium
-				// NameKey = "Factions/Imperium"
-				// Icon
-				// {
-					// Texture
-					// {
-						// File = "imperium.png"
-						// SampleMode = Linear
-						// MipLevels = max
-					// }
-				// }
-				// BorderColor = [255, 0, 49]
-				// MilitaryPlayerIndex = 300
-				// CivilianPlayerIndex = 301
-			// }
-			// // Fringe Systems Resistance
-			// {
-				// ID = fringe
-				// NameKey = "Factions/Fringe"
-				// Icon
-				// {
-					// Texture
-					// {
-						// File = "fringe.png"
-						// SampleMode = Linear
-						// MipLevels = max
-					// }
-				// }
-				// BorderColor = [127, 127, 127, 127]
-				// MilitaryPlayerIndex = 400
-				// CivilianPlayerIndex = 401
-			// }
-		// ]
-	// }
+	{
+		Action = Replace
+		Replace = "<galaxy_map/map_generators/base_galaxy.rules>/StartingNodePicker/CandidatesClosestToFactions"
+        With = [1, [monolith, cabal, stafa.federation]]
+	}
 ]
