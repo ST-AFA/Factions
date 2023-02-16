@@ -36,13 +36,13 @@ Actions
         ManyToAdd = &<galaxy_map/map_generators/base_galaxy.rules>/FactionTiers/Factions
 	}
 	
-	// Add faction to StartingNodePicker
-	{
-		Action = Replace
-		Replace = "<galaxy_map/map_generators/base_galaxy.rules>/StartingNodePicker/CandidatesClosestToFactions"
-		With = [1, [stafa.federation, monolith, cabal]]
-	}
-	// Allow spawn in federation space
+	// Add faction to StartingNodePicker -> Federation space should not be near the starting sector, as it is a mid game faction
+	// {
+		// Action = Replace
+		// Replace = "<galaxy_map/map_generators/base_galaxy.rules>/StartingNodePicker/CandidatesClosestToFactions"
+		// With = [1, [stafa.federation, monolith, cabal]]
+	// }
+	// Allow spawn in federation space  -> DO NOT USE - federation space is way too hard to start in!
 	// {
 		// Action = Replace
 		// Replace = "<galaxy_map/map_generators/base_galaxy.rules>/StartingNodePicker/AllowedFactions"
