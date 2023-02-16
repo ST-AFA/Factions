@@ -48,6 +48,12 @@ Actions
 		// Replace = "<galaxy_map/map_generators/base_galaxy.rules>/StartingNodePicker/AllowedFactions"
 		// With = [fringe, stafa.federation]
 	// }
+	// Add faction to StartingNodePicker
+	{
+		Action = Replace
+		Replace = "<galaxy_map/map_generators/base_galaxy.rules>/StartingNodePicker/CandidatesFarthestFromFactions"
+		With = [5, [stafa.federation, imperium]]
+	}
 	
 	// Add Starfleet and Federation codex lore
 	{
