@@ -3,7 +3,7 @@ Tags = [combat]
 
 Ships
 [
-
+	:~{ File="Federation-Sector-Security.ship.png";			Tier=1;  Difficulty=1; }
 	:~{ File="Federation-Nova-Class.ship.png";			Tier=4;  Difficulty=1; }
 	:~{ File="Federation-Miranda-Class.ship.png";		Tier=4;  Difficulty=1; }
 	:~{ File="Federation-Centaur-Class.ship.png";		Tier=5;  Difficulty=1; }
