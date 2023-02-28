@@ -1,5 +1,5 @@
 # Star Trek Federation Faction
-![Logo](https://github.com/ST-AFA/Faction/blob/.images/Faction-Banner.png)
+![Logo](.images/Faction-Banner.png)
 
 The Federation Faction Mod add Federation as a ingame Faction
 
