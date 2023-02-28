@@ -1,10 +1,13 @@
 # Star Trek Federation Faction
 ![Logo](.images/Faction-Banner.png)
 
-The Federation Faction Mod add Federation as a ingame Faction
+The Faction Mod adds various factions to the game as a ingame Faction to the game.
 
-Mod [Folder](https://github.com/ST-AFA/Federation_Faction/tree/main/mod)
+## Federation
+Mod [Folder](https://github.com/ST-AFA/Factions/tree/main/Federation/mod)
 Contains the mod
 
-Source [Folder](https://github.com/ST-AFA/Federation_Faction/tree/main/source)
+Source [Folder](https://github.com/ST-AFA/Factions/tree/main/Federation/source)
 Contains the source files
+
+## Borg
