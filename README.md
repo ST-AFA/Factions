@@ -1,4 +1,4 @@
-# Star Trek Federation Faction
+# Star Trek Factions
 ![Logo](.images/Faction-Banner.png)
 
 The Faction Mod adds various factions to the game as a ingame Faction to the game.
