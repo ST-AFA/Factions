@@ -1,5 +1,4 @@
 Faction = stafa.federation
-IDPrefix = "Senfdeckels.Galactic_Empire"
 Tags = [defense]
 
 Ships

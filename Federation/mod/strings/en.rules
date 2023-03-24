@@ -6,6 +6,13 @@ Factions
 	Federation = "United Federation of Planets"
 }
 
+StarterShips
+{
+	OberthClass = 	"The Oberth class is a very basic federation ship,"\
+					"constructed in the late 23rd century.\n\n"\
+					"It is small and slow, but comes with a good manouverability and a decent weaponry."
+}
+
 Lore
 {
 	Federation

@@ -104,11 +104,11 @@ Actions
 	}
 	
 	//Add Starter Ships
-	// {
+	{
 		
-		// Action = AddMany
-		// AddTo = "<builtin_ships/Starter/builtins_starter.rules>/Ships"
-        // ManyToAdd = &<buildin_ships/fed/Starter/Starter.rules>/Ships
+		Action = AddMany
+		AddTo = "<modes/career/career.rules>/StarterShips"
+        ManyToAdd = &<buildin_ships/fed/Starter/Starter.rules>/StarterShips
 		
-	// }
+	}
 ]

@@ -1,0 +1,7 @@
+StarterShips
+[
+	{
+		Ship = "Federation-Oberth-Class.ship.png"
+		DescriptionKey = "StarterShips/OberthClass"
+	}
+]
