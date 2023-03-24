@@ -4,10 +4,13 @@
 The Faction Mod adds various factions to the game as a ingame Faction to the game.
 
 ## Federation
-Mod [Folder](https://github.com/ST-AFA/Factions/tree/main/Federation/mod)
-Contains the mod
-
-Source [Folder](https://github.com/ST-AFA/Factions/tree/main/Federation/source)
-Contains the source files
+Mod [Folder](https://github.com/ST-AFA/Factions/tree/main/Federation/)
 
 ## Borg
+Mod [Folder](https://github.com/ST-AFA/Factions/tree/main/Borg/)
+
+## Klingon
+Mod [Folder](https://github.com/ST-AFA/Factions/tree/main/Klingon/)
+
+## Source
+Source [Folder](https://github.com/ST-AFA/Factions/tree/main/source)
