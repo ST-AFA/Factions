@@ -112,3 +112,12 @@ Actions
 		
 	}
 ]
+
+ShipLibraries
+[
+	{
+		Folder = "ships"
+		NameKey = "FederationPlayerShips"
+		TooltipKey = "FederationPlayerShipsTip"
+	}
+]

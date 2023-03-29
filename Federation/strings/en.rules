@@ -35,3 +35,6 @@ Lore
 					"to prevent key historical events from occurring. "
 	}
 }
+
+FederationPlayerShips = "ST-AFA Fed ships"
+FederationPlayerShipsTip = "Ships added by the ST-AFA Federation Faction mod"
