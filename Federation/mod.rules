@@ -2,7 +2,7 @@ ID = "st-afa.199_federation"
 Name = "ST-AFA - Federation Faction"
 Version = 0.2.2
 Author = "ST-AFA Mod-Team"
-CompatibleGameVersions = ["0.21.0"]
+CompatibleGameVersions = ["0.23.0"]
 ModifiesMultiplayer = true
 Logo = logo.png
 Description = "Adds a Starfleet faction to the game \n\n"\
@@ -110,14 +110,5 @@ Actions
 		AddTo = "<modes/career/career.rules>/StarterShips"
         ManyToAdd = &<buildin_ships/fed/Starter/Starter.rules>/StarterShips
 		
-	}
-]
-
-ShipLibraries
-[
-	{
-		Folder = "ships"
-		NameKey = "FederationPlayerShips"
-		TooltipKey = "FederationPlayerShipsTip"
 	}
 ]
